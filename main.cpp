@@ -6,10 +6,10 @@
 void showGreetingDialog()
 {
     bool ok;
-    QString name = QInputDialog::getText(0, "Name", "Enter your name:", QLineEdit::Normal, "", &ok);
+    QString name = QInputDialog::getText(QApplication::activeWindow() ? QApplication::activeWindow() : nullptr, "Name", "Enter your name:", QLineEdit::Normal, "", &ok);
     if (ok && !name.isEmpty())
     {
-        QMessageBox::information(0, "Hello", "Hello, " + name);
+        QMessageBox::information(QApplication::activeWindow() ? QApplication::activeWindow() : nullptr, "Hello", "Hello, " + name);
     }
 }
 
