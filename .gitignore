@@ -1,0 +1,23 @@
+# Build files
+build/
+*.o
+*.a
+*.so
+*.dll
+*.exe
+
+# IDE generated files
+*.user
+*.pro.user
+
+# Qml files
+*.qmlc
+*.jsc
+*.qmlproject
+
+# Log files
+*.log
+*.txt
+
+# lock files
+*.lock
